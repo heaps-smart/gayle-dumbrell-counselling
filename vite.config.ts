@@ -9,7 +9,9 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/gayle-dumbrell-counselling/' : '/',
+  // Always use root base path since custom domain is primary
+  // GitHub Pages will redirect github.io URL to custom domain anyway
+  base: '/',
   plugins,
   resolve: {
     alias: {

@@ -9,16 +9,15 @@
       // https://github.com/rafgraph/spa-github-pages
       var l = window.location;
       
-      // Determine base path based on hostname
+      // Determine base path based on hostname (for routing only)
       var basePath = '/';
       if (l.hostname === 'heaps-smart.github.io') {
         basePath = '/gayle-dumbrell-counselling';
       }
-      // For custom domain (gayledumbrellcounselling.com.au), basePath is '/'
       
-      // Check if we're already on the base path
+      // Handle routing
       if (basePath !== '/' && l.pathname.startsWith(basePath)) {
-        // Extract the route after the base path
+        // Already on base path, extract route
         var route = l.pathname.slice(basePath.length) || '/';
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -27,7 +26,7 @@
           l.hash
         );
       } else if (basePath === '/') {
-        // For custom domain, use standard SPA redirect without base path
+        // Custom domain: route at root
         var route = l.pathname === '/' ? '/' : l.pathname;
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -36,7 +35,7 @@
           l.hash
         );
       } else {
-        // If not on base path, redirect to base path with route
+        // GitHub Pages: redirect to base path with route
         var route = l.pathname === '/' ? '/' : l.pathname;
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
