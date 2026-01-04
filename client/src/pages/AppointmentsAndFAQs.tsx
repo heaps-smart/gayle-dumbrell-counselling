@@ -120,7 +120,7 @@ export default function AppointmentsAndFAQs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
                   Open Contact Form
                 </Button>
               </a>

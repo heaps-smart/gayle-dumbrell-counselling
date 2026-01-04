@@ -15,6 +15,11 @@ export default function Footer() {
             <p className="text-muted-foreground text-sm leading-relaxed">
               Gentle, supportive counselling for children and families in Busselton, Western Australia.
             </p>
+            <Link href="/privacy-policy">
+              <a className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Privacy Policy
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -24,11 +29,6 @@ export default function Footer() {
             <p className="text-muted-foreground text-sm">
               © {currentYear} Gayle Dumbrell Counselling. All rights reserved.
             </p>
-            <Link href="/privacy-policy">
-              <a className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                Privacy Policy
-              </a>
-            </Link>
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/appointments-faqs#contact">
                 <a>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
+                  <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground w-full sm:w-auto">
                     Book a free call
                   </Button>
                 </a>
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="flex justify-center pt-8">
             <Link href="/about-me">
               <a>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
                   Learn more about me
                 </Button>
               </a>
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="flex justify-center pt-8">
             <Link href="/how-i-can-help">
               <a>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
                   Learn more about my approach
                 </Button>
               </a>
@@ -132,7 +132,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link href="/appointments-faqs">
                 <a>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
                     Learn more about appointments
                   </Button>
                 </a>

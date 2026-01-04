@@ -37,7 +37,7 @@ export default function NotFound() {
             <Button
               onClick={handleGoHome}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground"
             >
               Go Home
             </Button>

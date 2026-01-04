@@ -152,7 +152,7 @@ export default function HowICanHelp() {
             </p>
             <Link href="/appointments-faqs#contact">
               <a>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
                   Book a free call
                 </Button>
               </a>
