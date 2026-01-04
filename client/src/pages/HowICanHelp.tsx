@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
+import { getAssetPath } from '@/utils/assets';
 
 export default function HowICanHelp() {
   return (
@@ -21,7 +22,7 @@ export default function HowICanHelp() {
             {/* Right Image */}
             <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/kid-hugging-dad.jpg"
+                src={getAssetPath('/images/kid-hugging-dad.jpg')}
                 alt="Child hugging parent"
                 className="w-full h-full object-cover"
               />
@@ -37,7 +38,7 @@ export default function HowICanHelp() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
             <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/help.jpg"
+                src={getAssetPath('/images/help.jpg')}
                 alt="Helping children"
                 className="w-full h-full object-cover"
               />

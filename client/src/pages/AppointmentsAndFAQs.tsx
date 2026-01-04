@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { getAssetPath } from '@/utils/assets';
 
 export default function AppointmentsAndFAQs() {
 
@@ -58,7 +59,7 @@ export default function AppointmentsAndFAQs() {
             {/* Right Video */}
             <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
               <video
-                src="/video/hero-video-3.mp4"
+                src={getAssetPath('/video/hero-video-3.mp4')}
                 autoPlay
                 loop
                 muted

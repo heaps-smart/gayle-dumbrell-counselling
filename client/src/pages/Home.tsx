@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
+import { getAssetPath } from '@/utils/assets';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center overflow-hidden">
         {/* Background Video */}
         <video
-          src="/video/hero-video-1.mp4"
+          src={getAssetPath('/video/hero-video-1.mp4')}
           autoPlay
           loop
           muted
@@ -48,7 +49,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/gayle-dumbrell.jpg"
+                src={getAssetPath('/images/gayle-dumbrell.jpg')}
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
@@ -101,7 +102,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/children-painting.jpg"
+                src={getAssetPath('/images/children-painting.jpg')}
                 alt="Children painting"
                 className="w-full h-full object-cover"
               />
