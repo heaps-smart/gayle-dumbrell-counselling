@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, useLocation } from "wouter";
+import { Route, Switch, useLocation, Router as WouterRouter } from "wouter";
 import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -12,6 +12,9 @@ import AppointmentsAndFAQs from "./pages/AppointmentsAndFAQs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+
+// Get base path from import.meta.env.BASE_URL (set by Vite)
+const basePath = import.meta.env.BASE_URL || '/';
 
 // Handle GitHub Pages SPA routing with query parameters
 function GitHubPagesRouter() {
@@ -64,7 +67,7 @@ function ScrollToTop() {
 
 function Router() {
   return (
-    <>
+    <WouterRouter base={basePath}>
       <GitHubPagesRouter />
       <ScrollToTop />
       <Switch>
@@ -77,7 +80,7 @@ function Router() {
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>
-    </>
+    </WouterRouter>
   );
 }
 
