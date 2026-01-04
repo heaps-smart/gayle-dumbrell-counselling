@@ -26,7 +26,6 @@ export default function HowICanHelp() {
                 alt="Child hugging parent"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
           </div>
         </div>
@@ -42,7 +41,6 @@ export default function HowICanHelp() {
                 alt="Helping children"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
             <div className="space-y-4">
               <h2 className="text-foreground mb-6 text-left">I work with children who may be experiencing:</h2>

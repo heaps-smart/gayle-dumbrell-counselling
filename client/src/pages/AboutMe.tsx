@@ -24,7 +24,6 @@ export default function AboutMe() {
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-background/20" />
             </div>
           </div>
         </div>
@@ -40,7 +39,6 @@ export default function AboutMe() {
                 alt="Child with parent"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
             <div>
               <h2 className="text-foreground mb-8">My approach</h2>

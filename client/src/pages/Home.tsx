@@ -53,7 +53,6 @@ export default function Home() {
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-background/20" />
             </div>
             <div className="space-y-6">
               <h2 className="text-foreground mb-6">Hi there.</h2>
@@ -107,7 +106,6 @@ export default function Home() {
                 alt="Children painting"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
           </div>
           <div className="flex justify-center pt-8">
