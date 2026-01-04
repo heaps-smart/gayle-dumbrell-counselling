@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-accent/30 to-background">
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-background via-accent/30 to-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -17,13 +17,12 @@ export default function AboutMe() {
                 I bring over 35 years of experience in education as a teacher, along with recent experience working as a counsellor in a primary school setting. This background has given me a deep understanding of children's emotional development, learning environments, and the challenges families and schools face every day.
               </p>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
-              <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👋</div>
-                  <p className="text-muted-foreground">Gayle Dumbrell</p>
-                </div>
-              </div>
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/gayle-dumbrell-2.jpg"
+                alt="Gayle Dumbrell"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -32,23 +31,55 @@ export default function AboutMe() {
       {/* My Approach */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/kid-feeding-mum.jpg"
+                alt="Child with parent"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            </div>
+            <div>
+              <h2 className="text-foreground mb-8">My approach</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                My counselling style is warm, empathetic, and practical. I focus on creating a calm, supportive space where children feel safe, understood, and accepted.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                I support children, adolescents, and families as they navigate emotional challenges, life changes, and periods of uncertainty, helping them build confidence, resilience, and emotional wellbeing.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I also have a strong understanding of the pressures faced by teachers and school staff, and I offer a supportive space for them to explore their own wellbeing needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Working with Me */}
+      <section className="py-16 md:py-24 bg-muted/50">
+        <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-foreground mb-8">My approach</h2>
+            <h2 className="text-foreground mb-8">Working with me</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              My counselling style is warm, empathetic, and practical. I focus on creating a calm, supportive space where children feel safe, understood, and accepted.
+              Based in Busselton, I offer both face-to-face and online counselling for clients in the local area and surrounding districts.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I support children, adolescents, and families as they navigate emotional challenges, life changes, and periods of uncertainty, helping them build confidence, resilience, and emotional wellbeing.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+              My work is guided by empathy, respect, and genuine care, always moving at a pace that feels right for each individual.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I also have a strong understanding of the pressures faced by teachers and school staff, and I offer a supportive space for them to explore their own wellbeing needs.
-            </p>
+            <Link href="/appointments-faqs#contact">
+              <a>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Book a free call
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Qualifications */}
-      <section className="py-16 md:py-24 bg-muted/50">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="text-foreground mb-12 text-center">Qualifications & Experience</h2>
           <div className="max-w-3xl mx-auto">
@@ -74,28 +105,6 @@ export default function AboutMe() {
                 <p className="text-muted-foreground">Recent experience working as a counsellor in a primary school setting, understanding the unique challenges families and schools face</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Working with Me */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-foreground mb-8">Working with me</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Based in Busselton, I offer both face-to-face and online counselling for clients in the local area and surrounding districts.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              My work is guided by empathy, respect, and genuine care, always moving at a pace that feels right for each individual.
-            </p>
-            <Link href="/appointments-faqs#contact">
-              <a>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Book a free call
-                </Button>
-              </a>
-            </Link>
           </div>
         </div>
       </section>

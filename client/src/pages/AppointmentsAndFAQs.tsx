@@ -42,53 +42,68 @@ export default function AppointmentsAndFAQs() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-accent/30 to-background">
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
         <div className="container">
-          <h1 className="text-foreground">Appointments & FAQs</h1>
-        </div>
-      </section>
+          <h1 className="text-foreground leading-tight mb-12">Appointments & FAQs</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 gap-8">
+                {/* Appointments Column */}
+                <div>
+                  <h2 className="text-foreground mb-6">Appointments</h2>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-primary" />
+                      </div>
+                      <p className="text-lg text-foreground">Sessions are available by appointment</p>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-primary" />
+                      </div>
+                      <p className="text-lg text-foreground">The initial call is free and obligation-free</p>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-primary" />
+                      </div>
+                      <p className="text-lg text-foreground">Session frequency is discussed based on your child's needs</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Appointments are designed to be flexible and supportive, with your child's wellbeing always the priority.
+                  </p>
+                </div>
 
-      {/* Appointments Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container">
-          <h2 className="text-foreground mb-8">Appointments</h2>
-          <div className="max-w-3xl space-y-4 mb-12">
-            <div className="flex items-start gap-4">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+                {/* Fees Column */}
+                <div>
+                  <h2 className="text-foreground mb-6">Fees</h2>
+                  <div>
+                    <p className="text-xl text-foreground mb-4">
+                      <span className="font-bold">$120</span> per hourly counselling session
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Please get in touch if you have questions about session length, availability, or pricing.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p className="text-lg text-foreground">Sessions are available by appointment</p>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-              </div>
-              <p className="text-lg text-foreground">The initial call is free and obligation-free</p>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-              </div>
-              <p className="text-lg text-foreground">Session frequency is discussed based on your child's needs</p>
-            </div>
-          </div>
-          <p className="text-muted-foreground leading-relaxed max-w-3xl">
-            Appointments are designed to be flexible and supportive, with your child's wellbeing always the priority.
-          </p>
-        </div>
-      </section>
 
-      {/* Fees Section */}
-      <section className="py-16 md:py-24 bg-muted/50">
-        <div className="container">
-          <h2 className="text-foreground mb-8">Fees</h2>
-          <div className="max-w-3xl">
-            <p className="text-xl text-foreground mb-4">
-              <span className="font-bold">$120</span> per hourly counselling session
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Please get in touch if you have questions about session length, availability, or pricing.
-            </p>
+            {/* Right Video */}
+            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
+              <video
+                src="/video/hero-video-3.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            </div>
           </div>
         </div>
       </section>
@@ -135,6 +150,11 @@ export default function AppointmentsAndFAQs() {
               Book a free call to discuss your child's needs and see if counselling is the right fit for your family.
             </p>
 
+            {/* 
+              TODO: Consider replacing with Tally form embed for email notifications and spreadsheet integration
+              Tally provides: email notifications, Google Sheets integration, and easy embedding
+              Alternative: Build custom form with backend API for email service (SendGrid, Resend, etc.) and spreadsheet API
+            */}
             <form onSubmit={handleSubmit} className="bg-background rounded-xl p-8 border border-border shadow-sm space-y-6">
               {/* Name */}
               <div className="space-y-2">

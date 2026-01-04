@@ -5,13 +5,28 @@ export default function HowICanHelp() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-accent/30 to-background">
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
         <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-foreground mb-6">Supporting children through emotional challenges</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Children don't always have the words to explain what they're feeling. Counselling gives them space to explore emotions in ways that feel natural and safe.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <h1 className="text-foreground leading-tight">
+                Supporting children through emotional challenges
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Children don't always have the words to explain what they're feeling. Counselling gives them space to explore emotions in ways that feel natural and safe.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/kid-hugging-dad.jpg"
+                alt="Child hugging parent"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            </div>
           </div>
         </div>
       </section>
@@ -20,8 +35,16 @@ export default function HowICanHelp() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/help.jpg"
+                alt="Helping children"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            </div>
             <div className="space-y-4">
-              <h2 className="text-foreground mb-6">I work with children who may be experiencing:</h2>
+              <h2 className="text-foreground mb-6 text-left">I work with children who may be experiencing:</h2>
               <ul className="space-y-4">
                 {[
                   'Anxiety or ongoing worries',
@@ -30,22 +53,14 @@ export default function HowICanHelp() {
                   'Social challenges or school stress',
                   'Low confidence or self-esteem',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <li key={idx} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 rounded-full bg-secondary" />
                     </div>
                     <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="/images/kid-hugging-dad.jpg"
-                alt="Child hugging parent"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
           </div>
         </div>
