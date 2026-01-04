@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import { ArrowRight } from 'lucide-react';
 
 export default function AboutMe() {
   return (
@@ -94,7 +93,6 @@ export default function AboutMe() {
               <a>
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Book a free call
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
             </Link>

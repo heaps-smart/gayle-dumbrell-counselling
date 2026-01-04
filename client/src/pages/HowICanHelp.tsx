@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import { ArrowRight } from 'lucide-react';
 
 export default function HowICanHelp() {
   return (
@@ -20,9 +19,9 @@ export default function HowICanHelp() {
       {/* Who I Work With */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
-          <h2 className="text-foreground mb-12">I work with children who may be experiencing:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
             <div className="space-y-4">
+              <h2 className="text-foreground mb-6">I work with children who may be experiencing:</h2>
               <ul className="space-y-4">
                 {[
                   'Anxiety or ongoing worries',
@@ -40,10 +39,10 @@ export default function HowICanHelp() {
                 ))}
               </ul>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/kid-feeding-mum.jpg"
-                alt="Child with parent"
+                src="/images/kid-hugging-dad.jpg"
+                alt="Child hugging parent"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
@@ -139,7 +138,6 @@ export default function HowICanHelp() {
               <a>
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Book a free call
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
             </Link>

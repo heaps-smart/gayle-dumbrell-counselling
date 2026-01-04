@@ -1,44 +1,42 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-6">
-              <h1 className="text-foreground leading-tight">
-                Gentle counselling support for children and families
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Helping children understand their feelings, build resilience, and feel more confident during life's challenges.
-              </p>
-              <p className="text-base text-muted-foreground italic">
-                Book a short, no-pressure conversation to see if counselling is the right fit for your child.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link href="/appointments-faqs#contact">
-                  <a>
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
-                      Book a free call
-                    </Button>
-                  </a>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="/images/kid-hugging-dad.jpg"
-                alt="Child hugging parent"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+      <section className="relative h-screen flex items-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          src="/video/hero-video-1.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-background/60" />
+        {/* Content */}
+        <div className="relative z-10 container flex items-center h-full px-4 md:px-8">
+          <div className="max-w-3xl space-y-6 bg-background/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl -mt-16 md:-mt-20">
+            <h1 className="text-foreground leading-tight">
+              Gentle counselling support for children, families, and teachers
+            </h1>
+            <p className="text-lg text-foreground leading-relaxed">
+              Helping children understand their feelings, build resilience, and feel more confident during life's challenges.
+            </p>
+            <p className="text-base text-foreground/90 italic">
+              Book a short, no-pressure conversation to see if counselling is the right fit for your child.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link href="/appointments-faqs#contact">
+                <a>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
+                    Book a free call
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,21 +45,29 @@ export default function Home() {
       {/* About Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-foreground mb-6">Hi there.</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Every child experiences moments when emotions feel big, confusing, or overwhelming. Sometimes they need a little extra support to make sense of what's happening inside and around them.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I offer a calm, supportive space where children feel safe to express themselves and be understood.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/gayle-dumbrell.jpg"
+                alt="Gayle Dumbrell"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-foreground mb-6">Hi there.</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Every child experiences moments when emotions feel big, confusing, or overwhelming. Sometimes they need a little extra support to make sense of what's happening inside and around them.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I offer a calm, supportive space where children feel safe to express themselves and be understood.
+              </p>
+            </div>
           </div>
           <div className="flex justify-center pt-8">
             <Link href="/about-me">
               <a>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Learn more about me
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
             </Link>
@@ -72,7 +78,7 @@ export default function Home() {
       {/* How I Can Help Section */}
       <section className="py-16 md:py-24 bg-muted/50">
         <div className="container">
-          <h2 className="text-foreground mb-12 text-center">How I can help</h2>
+          <h2 className="text-foreground mb-12">How I can help</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-4">
               <h3 className="text-secondary font-display text-2xl">I support children and families with:</h3>
@@ -84,8 +90,8 @@ export default function Home() {
                   'School or friendship challenges',
                   'Confidence and self-esteem',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <li key={idx} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 rounded-full bg-primary" />
                     </div>
                     <span className="text-foreground">{item}</span>
@@ -105,9 +111,8 @@ export default function Home() {
           <div className="flex justify-center pt-8">
             <Link href="/how-i-can-help">
               <a>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Learn more about my approach
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
             </Link>
@@ -126,7 +131,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link href="/appointments-faqs">
                 <a>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                     Learn more about appointments
                   </Button>
                 </a>

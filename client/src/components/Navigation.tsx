@@ -18,12 +18,9 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">G</span>
-              </div>
-              <span className="font-display text-xl font-bold text-foreground hidden sm:inline">
-                Gayle Dumbrell
+            <a className="flex items-center hover:opacity-80 transition-opacity">
+              <span className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Gayle Dumbrell Counselling
               </span>
             </a>
           </Link>

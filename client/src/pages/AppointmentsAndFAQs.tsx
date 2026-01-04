@@ -221,6 +221,7 @@ export default function AppointmentsAndFAQs() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
+                size="lg"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
