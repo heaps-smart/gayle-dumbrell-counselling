@@ -14,7 +14,7 @@ export default function Footer() {
             </h3>
             <a 
               href="mailto:gdcounselling@outlook.com" 
-              className="text-primary text-sm leading-relaxed hover:underline block mt-1"
+              className="text-foreground text-base font-medium leading-relaxed hover:text-primary transition-colors block mt-2"
             >
               gdcounselling@outlook.com
             </a>

@@ -24,7 +24,7 @@ export default function HowICanHelp() {
               <img
                 src={getAssetPath('/images/kid-hugging-dad.webp')}
                 alt="Child hugging parent"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function HowICanHelp() {
               <img
                 src={getAssetPath('/images/help.webp')}
                 alt="Helping children"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
             <div className="space-y-4">

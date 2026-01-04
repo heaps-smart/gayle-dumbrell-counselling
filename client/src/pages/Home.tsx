@@ -51,7 +51,7 @@ export default function Home() {
               <img
                 src={getAssetPath('/images/gayle-dumbrell.webp')}
                 alt="Gayle Dumbrell"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
             <div className="space-y-6">
@@ -104,7 +104,7 @@ export default function Home() {
               <img
                 src={getAssetPath('/images/children-painting.webp')}
                 alt="Children painting"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>

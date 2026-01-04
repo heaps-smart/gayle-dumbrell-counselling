@@ -22,7 +22,7 @@ export default function AboutMe() {
               <img
                 src={getAssetPath('/images/gayle-dumbrell-2.webp')}
                 alt="Gayle Dumbrell"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
@@ -37,7 +37,7 @@ export default function AboutMe() {
               <img
                 src={getAssetPath('/images/kid-feeding-mum.webp')}
                 alt="Child with parent"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
             <div>
