@@ -12,9 +12,10 @@ import AppointmentsAndFAQs from "./pages/AppointmentsAndFAQs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import { getRuntimeBasePath } from "@/utils/assets";
 
-// Get base path from import.meta.env.BASE_URL (set by Vite)
-const basePath = import.meta.env.BASE_URL || '/';
+// Get runtime base path based on hostname
+const basePath = getRuntimeBasePath();
 
 // Handle GitHub Pages SPA routing with query parameters
 function GitHubPagesRouter() {

@@ -7,17 +7,31 @@
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1; // Keep the base path segment (/gayle-dumbrell-counselling)
       var l = window.location;
-      var basePath = '/gayle-dumbrell-counselling';
+      
+      // Determine base path based on hostname
+      var basePath = '/';
+      if (l.hostname === 'heaps-smart.github.io') {
+        basePath = '/gayle-dumbrell-counselling';
+      }
+      // For custom domain (gayledumbrellcounselling.com.au), basePath is '/'
       
       // Check if we're already on the base path
-      if (l.pathname.startsWith(basePath)) {
+      if (basePath !== '/' && l.pathname.startsWith(basePath)) {
         // Extract the route after the base path
         var route = l.pathname.slice(basePath.length) || '/';
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
           basePath + '/?/' + route.replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      } else if (basePath === '/') {
+        // For custom domain, use standard SPA redirect without base path
+        var route = l.pathname === '/' ? '/' : l.pathname;
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          '/?/' + route.replace(/&/g, '~and~') +
           (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash
         );
