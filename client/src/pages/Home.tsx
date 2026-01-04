@@ -49,7 +49,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={getAssetPath('/images/gayle-dumbrell.jpg')}
+                src={getAssetPath('/images/gayle-dumbrell.webp')}
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={getAssetPath('/images/children-painting.jpg')}
+                src={getAssetPath('/images/children-painting.webp')}
                 alt="Children painting"
                 className="w-full h-full object-cover"
               />

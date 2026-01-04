@@ -20,7 +20,7 @@ export default function AboutMe() {
             </div>
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={getAssetPath('/images/gayle-dumbrell-2.jpg')}
+                src={getAssetPath('/images/gayle-dumbrell-2.webp')}
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
@@ -36,7 +36,7 @@ export default function AboutMe() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={getAssetPath('/images/kid-feeding-mum.jpg')}
+                src={getAssetPath('/images/kid-feeding-mum.webp')}
                 alt="Child with parent"
                 className="w-full h-full object-cover"
               />
