@@ -9,8 +9,31 @@ import Home from "./pages/Home";
 import HowICanHelp from "./pages/HowICanHelp";
 import AboutMe from "./pages/AboutMe";
 import AppointmentsAndFAQs from "./pages/AppointmentsAndFAQs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+
+// Handle GitHub Pages SPA routing with query parameters
+function GitHubPagesRouter() {
+  const [location, setLocation] = useLocation();
+  
+  useEffect(() => {
+    // Check if we have a query parameter route (from 404.html redirect)
+    const searchParams = new URLSearchParams(window.location.search);
+    const route = searchParams.get('/');
+    
+    if (route) {
+      // Decode the route and update the location
+      const decodedRoute = route.replace(/~and~/g, '&');
+      // Remove the query parameter and update the URL
+      const newUrl = window.location.pathname + decodedRoute + window.location.hash;
+      window.history.replaceState(null, '', newUrl);
+      setLocation(decodedRoute);
+    }
+  }, []);
+  
+  return null;
+}
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -42,12 +65,14 @@ function ScrollToTop() {
 function Router() {
   return (
     <>
+      <GitHubPagesRouter />
       <ScrollToTop />
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/how-i-can-help"} component={HowICanHelp} />
         <Route path={"/about-me"} component={AboutMe} />
         <Route path={"/appointments-faqs"} component={AppointmentsAndFAQs} />
+        <Route path={"/privacy-policy"} component={PrivacyPolicy} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

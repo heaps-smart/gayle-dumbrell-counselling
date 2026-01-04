@@ -1,43 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import { useState } from 'react';
-import { toast } from 'sonner';
 
 export default function AppointmentsAndFAQs() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    therapyFor: 'child',
-    message: '',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Since this is a static site, we'll just show a success message
-      // In a real scenario, you'd send this to a backend or email service
-      toast.success('Thank you for reaching out! I\'ll be in touch soon.');
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        therapyFor: 'child',
-        message: '',
-      });
-    } catch (error) {
-      toast.error('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -150,103 +113,17 @@ export default function AppointmentsAndFAQs() {
               Book a free call to discuss your child's needs and see if counselling is the right fit for your family.
             </p>
 
-            {/* 
-              TODO: Consider replacing with Tally form embed for email notifications and spreadsheet integration
-              Tally provides: email notifications, Google Sheets integration, and easy embedding
-              Alternative: Build custom form with backend API for email service (SendGrid, Resend, etc.) and spreadsheet API
-            */}
-            <form onSubmit={handleSubmit} className="bg-background rounded-xl p-8 border border-border shadow-sm space-y-6">
-              {/* Name */}
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-foreground font-medium">
-                  Your name
-                </Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground"
-                />
-              </div>
-
-              {/* Phone */}
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="text-foreground font-medium">
-                  Your phone number
-                </Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground font-medium">
-                  Your email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground"
-                />
-              </div>
-
-              {/* Therapy For */}
-              <div className="space-y-3">
-                <Label className="text-foreground font-medium">Who is the therapy for?</Label>
-                <RadioGroup value={formData.therapyFor} onValueChange={(value) => setFormData({ ...formData, therapyFor: value })}>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="child" id="child" />
-                    <Label htmlFor="child" className="text-foreground font-normal cursor-pointer">
-                      My child
-                    </Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="myself" id="myself" />
-                    <Label htmlFor="myself" className="text-foreground font-normal cursor-pointer">
-                      Myself
-                    </Label>
-                  </div>
-                </RadioGroup>
-              </div>
-
-              {/* Message */}
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-foreground font-medium">
-                  Anything I should know?
-                </Label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell me a bit about what you're looking for..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground min-h-32 resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+            <div className="flex justify-center">
+              <a
+                href="https://tally.so/r/ja6xOJ"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
-            </form>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Open Contact Form
+                </Button>
+              </a>
+            </div>
 
             <p className="text-center text-muted-foreground text-sm mt-6">
               I'll get back to you as soon as possible to arrange a time that works for you.
