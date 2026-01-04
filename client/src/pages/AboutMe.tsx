@@ -70,7 +70,7 @@ export default function AboutMe() {
             <Link href="/appointments-faqs#contact">
               <a>
                 <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
-                  Book a free call
+                  Get in touch
                 </Button>
               </a>
             </Link>

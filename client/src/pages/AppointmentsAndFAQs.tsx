@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { getAssetPath } from '@/utils/assets';
 
 export default function AppointmentsAndFAQs() {
@@ -109,24 +108,17 @@ export default function AppointmentsAndFAQs() {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-foreground mb-2 text-center">Get in touch</h2>
             <p className="text-muted-foreground text-center mb-12">
-              Book a free call to discuss your child's needs and see if counselling is the right fit for your family.
+              Send me an email and I'll be in touch to arrange a short phone call. We can talk about your child's needs and see whether counselling feels like the right fit for your family.
             </p>
 
             <div className="flex justify-center">
               <a
-                href="https://tally.so/r/ja6xOJ"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:gdcounselling@outlook.com"
+                className="text-[#7A8C7E] hover:text-[#6B7D6F] transition-colors text-lg font-medium"
               >
-                <Button size="lg" className="bg-[#7A8C7E] hover:bg-[#6B7D6F] text-primary-foreground">
-                  Open Contact Form
-                </Button>
+                gdcounselling@outlook.com
               </a>
             </div>
-
-            <p className="text-center text-muted-foreground text-sm mt-6">
-              I'll get back to you as soon as possible to arrange a time that works for you.
-            </p>
           </div>
         </div>
       </section>

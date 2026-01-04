@@ -31,9 +31,20 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </Link>
-            <p className="text-muted-foreground text-sm mt-4 md:mt-0 md:text-right">
-              © {currentYear} Gayle Dumbrell Counselling. All rights reserved.
-            </p>
+            <div className="text-muted-foreground text-sm mt-4 md:mt-0 md:text-right space-y-1">
+              <p>© {currentYear} Gayle Dumbrell Counselling. All rights reserved.</p>
+              <p>
+                Website by{' '}
+                <a
+                  href="https://heaps-smart.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Heaps Smart
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
