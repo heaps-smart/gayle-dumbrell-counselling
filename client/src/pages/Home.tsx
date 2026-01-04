@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center overflow-hidden">
         {/* Background Video */}
         <video
-          src={getAssetPath('/video/hero-video-1.mp4')}
+          src={getAssetPath('/video/hero-video-2.mp4')}
           autoPlay
           loop
           muted

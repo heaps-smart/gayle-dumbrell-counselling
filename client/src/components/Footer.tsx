@@ -9,24 +9,18 @@ export default function Footer() {
         <div className="mb-8">
           {/* About */}
           <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-4">
+            <h3 className="font-display text-lg font-bold text-foreground">
               Gayle Dumbrell Counselling
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Gentle, supportive counselling for children and families in Busselton, Western Australia.
             </p>
             <Link href="/privacy-policy">
-              <a className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <a className="text-muted-foreground hover:text-primary transition-colors text-sm font-bold">
                 Privacy Policy
               </a>
             </Link>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-border pt-8">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-sm mt-4">
               © {currentYear} Gayle Dumbrell Counselling. All rights reserved.
             </p>
           </div>
