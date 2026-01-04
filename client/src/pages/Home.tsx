@@ -53,6 +53,7 @@ export default function Home() {
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-background/20" />
             </div>
             <div className="space-y-6">
               <h2 className="text-foreground mb-6">Hi there.</h2>

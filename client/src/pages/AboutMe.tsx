@@ -24,6 +24,7 @@ export default function AboutMe() {
                 alt="Gayle Dumbrell"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-background/20" />
             </div>
           </div>
         </div>

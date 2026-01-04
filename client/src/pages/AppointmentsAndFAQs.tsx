@@ -8,7 +8,6 @@ export default function AppointmentsAndFAQs() {
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
         <div className="container">
-          <h1 className="text-foreground leading-tight mb-12">Appointments & FAQs</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
