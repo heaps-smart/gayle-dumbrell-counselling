@@ -29,10 +29,12 @@ function GitHubPagesRouter() {
     if (route) {
       // Decode the route and update the location
       const decodedRoute = route.replace(/~and~/g, '&');
+      // Ensure route starts with / for proper routing
+      const normalizedRoute = decodedRoute.startsWith('/') ? decodedRoute : '/' + decodedRoute;
       // Remove the query parameter and update the URL
-      const newUrl = window.location.pathname + decodedRoute + window.location.hash;
+      const newUrl = normalizedRoute + window.location.hash;
       window.history.replaceState(null, '', newUrl);
-      setLocation(decodedRoute);
+      setLocation(normalizedRoute);
     }
   }, []);
   

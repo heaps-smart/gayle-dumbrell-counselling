@@ -28,9 +28,11 @@
       } else if (basePath === '/') {
         // Custom domain: route at root
         var route = l.pathname === '/' ? '/' : l.pathname;
+        // Remove leading slash to avoid double slashes
+        var cleanRoute = route.startsWith('/') ? route.slice(1) : route;
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          '/?/' + route.replace(/&/g, '~and~') +
+          '/?/' + cleanRoute.replace(/&/g, '~and~') +
           (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash
         );
