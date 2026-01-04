@@ -20,8 +20,8 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-border pt-8">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <p className="text-muted-foreground text-sm text-center">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <p className="text-muted-foreground text-sm">
               © {currentYear} Gayle Dumbrell Counselling. All rights reserved.
             </p>
             <Link href="/privacy-policy">
