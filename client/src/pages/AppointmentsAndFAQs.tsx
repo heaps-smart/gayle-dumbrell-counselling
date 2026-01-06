@@ -31,11 +31,11 @@ export default function AppointmentsAndFAQs() {
                       <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                         <div className="w-2 h-2 rounded-full bg-primary" />
                       </div>
-                      <p className="text-lg text-foreground">Session frequency is discussed based on your child's needs</p>
+                      <p className="text-lg text-foreground">Session frequency will be discussed based on individual needs</p>
                     </div>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Appointments are designed to be flexible and supportive, with your child's wellbeing always the priority.
+                    Appointments are designed to be flexible and supportive, where wellbeing is the priority.
                   </p>
                 </div>
 
@@ -108,7 +108,7 @@ export default function AppointmentsAndFAQs() {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-foreground mb-2 text-center">Get in touch</h2>
             <p className="text-muted-foreground text-center mb-12">
-              Send me an email and I'll be in touch to arrange a short phone call. We can talk about your child's needs and see whether counselling feels like the right fit for your family.
+              Send me an email and I'll be in touch to arrange a short phone call. We can talk about your needs and see whether counselling feels like the right fit for your family.
             </p>
 
             <div className="flex justify-center">
